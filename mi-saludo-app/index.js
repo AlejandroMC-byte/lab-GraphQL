@@ -1,6 +1,7 @@
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
 const path = require('path'); 
+const date = new Date().toLocaleDateString()
 
 // Define el esquema de GraphQL
 const typeDefs = gql`
@@ -27,7 +28,7 @@ const resolvers = {
       return `HELLO! Your name is ${message}, isn't it? Very nice to meet you! This is Mauricio Carrillo speaking. Anyways, have a good day!`;
     },
     nightwolf: (_, { message }) => {
-      return `Bonjour, ${message}! c'est un salutation de David Alberto, Au-revoir!`;
+      return `Bonjour, ${message}! c'est un salutation de David Alberto, Au-revoir!, c'est ${date}`;
     },
     camilo: (_, { message }) => {
       return `Hello ${message}, Have a nice day! greeting from Camilo!, bye`;
