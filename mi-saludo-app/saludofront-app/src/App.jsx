@@ -11,6 +11,7 @@ const FULL_QUERY = gql`
   query Full($message: String!) {
     hello(message: $message)
     alejandro(message: $message)
+    mauricio(message: $message)
   }
 `;
 
@@ -45,7 +46,7 @@ function Hello() {
       </Form>
       {data && <h2 className='mt-3'>{data.hello}</h2>}
       {data && <h2 className='mt-3'>{data.alejandro}</h2>}
-      
+      {data && <h2 className='mt-3'>{data.mauricio}</h2>}
     </div>
   );
 }
