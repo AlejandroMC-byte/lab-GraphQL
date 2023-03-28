@@ -7,6 +7,11 @@ const typeDefs = gql`
   type Query {
     hello(message: String!): String
     alejandro(message: String!): String
+<<<<<<< Updated upstream
+=======
+    mauricio(message:String!): String
+    camilo(message:String!): String
+>>>>>>> Stashed changes
   }
 `;
 
@@ -19,6 +24,15 @@ const resolvers = {
     alejandro: (_, { message }) => {
         return `Hello, ${message}! this is a greeting from Alejandro Montero C. Buh-Bye!`;
     },
+<<<<<<< Updated upstream
+=======
+    mauricio: (_, { message }) => {
+      return `HELLO! Your name is ${message}, isn't it? Very nice to meet you! This is Mauricio Carrillo speaking. Anyways, have a good day!`;
+    },
+    camilo: (_, { message }) => {
+      return `Hello ${message}, Have a nice day! greeting from Camilo!, bye`;
+    },
+>>>>>>> Stashed changes
   },
 };
 
