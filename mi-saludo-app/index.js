@@ -8,6 +8,7 @@ const typeDefs = gql`
     hello(message: String!): String
     alejandro(message: String!): String
     mauricio(message:String!): String
+    camilo(message:String!): String
   }
 `;
 
@@ -20,8 +21,12 @@ const resolvers = {
     alejandro: (_, { message }) => {
         return `Hello, ${message}! this is a greeting from Alejandro Montero C. Buh-Bye!`;
     },
+
     mauricio: (_, { message }) => {
       return `HELLO! Your name is ${message}, isn't it? Very nice to meet you! This is Mauricio Carrillo speaking. Anyways, have a good day!`;
+    },
+    camilo: (_, { message }) => {
+      return `Hello ${message}, Have a nice day! greeting from Camilo!, bye`;
     },
   },
 };
