@@ -1,6 +1,8 @@
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
 const path = require('path'); 
+const date = new Date().toLocaleDateString()
+const random = Math.random()
 
 // Define el esquema de GraphQL
 const typeDefs = gql`
@@ -20,17 +22,17 @@ const resolvers = {
         return `¡Hola, ${message}! Un saludo por parte del profe`;
     },
     alejandro: (_, { message }) => {
-        return `Hello, ${message}! this is a greeting from Alejandro Montero C. Buh-Bye!`;
+        return `Hello, ${message}! this is a greeting from Alejandro Montero C. Buh-Bye! ${date}`;
     },
 
     mauricio: (_, { message }) => {
-      return `HELLO! Your name is ${message}, isn't it? Very nice to meet you! This is Mauricio Carrillo speaking. Anyways, have a good day!`;
+      return `HELLO! Your name is ${message}, isn't it? Very nice to meet you! This is Mauricio Carrillo speaking. Before I go, here, a random number that will change every time! ${random}`;
     },
     nightwolf: (_, { message }) => {
-      return `Bonjour, ${message}! c'est un salutation de David Alberto, Au-revoir!`;
+      return `Bonjour, ${message}! c'est un salutation de David Alberto, Au-revoir!, c'est ${date}`;
     },
     camilo: (_, { message }) => {
-      return `Hello ${message}, Have a nice day! greeting from Camilo!, bye`;
+      return `Hello ${message}, Have a nice day! greeting from Camilo!, bye ${date}` ;
     },
   },
 };
