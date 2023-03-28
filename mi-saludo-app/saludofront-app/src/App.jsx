@@ -7,16 +7,19 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-const HELLO_QUERY = gql`
-  query Hello($message: String!) {
+const FULL_QUERY = gql`
+  query Full($message: String!) {
     hello(message: $message)
+    alejandro(message: $message)
   }
 `;
 
+
 function Hello() {
   const [message, setMessage] = useState('');
-  const [getGreeting, { loading, error, data }] = useLazyQuery(HELLO_QUERY);
+  const [getGreeting, { loading, error, data }] = useLazyQuery(FULL_QUERY);
 
+  // const alejandro = useLazyQuery(ALEJANDRO_QUERY);
   const handleSubmit = (e) => {
     e.preventDefault();
     getGreeting({ variables: { message } });
@@ -41,6 +44,8 @@ function Hello() {
         </Button>
       </Form>
       {data && <h2 className='mt-3'>{data.hello}</h2>}
+      {data && <h2 className='mt-3'>{data.alejandro}</h2>}
+      
     </div>
   );
 }
