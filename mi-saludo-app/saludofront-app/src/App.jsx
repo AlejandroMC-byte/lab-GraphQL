@@ -61,7 +61,7 @@ function App() {
       <Container className="my-5">
         <Row>
           <Col xs={12} md={{ span: 6, offset: 3 }}>
-            <h1>Aplicación React y GraphQL</h1>
+            <h1>Aplicación Ejemplo SmartMarketPlace</h1>
             <Hello />
           </Col>
         </Row>
