@@ -11,11 +11,8 @@ const FULL_QUERY = gql`
   query Full($message: String!) {
     hello(message: $message)
     alejandro(message: $message)
-<<<<<<< Updated upstream
-=======
     mauricio(message: $message)
     camilo(message: $message)
->>>>>>> Stashed changes
   }
 `;
 
@@ -50,12 +47,8 @@ function Hello() {
       </Form>
       {data && <h2 className='mt-3'>{data.hello}</h2>}
       {data && <h2 className='mt-3'>{data.alejandro}</h2>}
-<<<<<<< Updated upstream
-      
-=======
       {data && <h2 className='mt-3'>{data.mauricio}</h2>}
       {data && <h2 className='mt-3'>{data.camilo}</h2>}
->>>>>>> Stashed changes
     </div>
   );
 }
