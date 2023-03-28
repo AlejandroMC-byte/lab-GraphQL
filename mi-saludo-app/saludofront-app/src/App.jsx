@@ -12,6 +12,7 @@ const FULL_QUERY = gql`
     hello(message: $message)
     alejandro(message: $message)
     mauricio(message: $message)
+    nightwolf(message: $message)
   }
 `;
 
