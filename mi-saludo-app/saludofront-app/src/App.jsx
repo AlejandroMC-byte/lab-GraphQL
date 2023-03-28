@@ -13,6 +13,7 @@ const FULL_QUERY = gql`
     alejandro(message: $message)
     mauricio(message: $message)
     nightwolf(message: $message)
+    camilo(message: $message)
   }
 `;
 
@@ -49,6 +50,7 @@ function Hello() {
       {data && <h2 className='mt-3'>{data.alejandro}</h2>}
       {data && <h2 className='mt-3'>{data.mauricio}</h2>}
       {data && <h2 className='mt-3'>{data.nightwolf}</h2>}
+      {data && <h2 className='mt-3'>{data.camilo}</h2>}
     </div>
   );
 }
