@@ -21,7 +21,7 @@ const resolvers = {
         return `¡Hola, ${message}! Un saludo por parte del profe`;
     },
     alejandro: (_, { message }) => {
-        return `Hello, ${message}! this is a greeting from Alejandro Montero C. Buh-Bye!`;
+        return `Hello, ${message}! this is a greeting from Alejandro Montero C. Buh-Bye! ${date}`;
     },
 
     mauricio: (_, { message }) => {
@@ -31,7 +31,7 @@ const resolvers = {
       return `Bonjour, ${message}! c'est un salutation de David Alberto, Au-revoir!, c'est ${date}`;
     },
     camilo: (_, { message }) => {
-      return `Hello ${message}, Have a nice day! greeting from Camilo!, bye`;
+      return `Hello ${message}, Have a nice day! greeting from Camilo!, bye ${date}` ;
     },
   },
 };
